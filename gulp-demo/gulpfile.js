@@ -1,8 +1,7 @@
-// 应用gulp模块
+// 引用gulp模块
 const gulp = require('gulp');
-const htmlmin = require('htmlmin')
-const { basename } = require('path');
-
+const htmlmin = require('gulp-htmlmin')
+const fileinclude = 
 // 使用gulp.task建立任务
 gulp.task('first', (done) => {
   console.log('fisrt');
@@ -14,8 +13,9 @@ gulp.task('first', (done) => {
 // html任务
 // 1、html文件中的代码压缩操作
 // 2、抽取HTML文件中的公共代码
-gulp.task('htmlmin', () => {
-  gulp.src('./src/*.html')
+gulp.task('html', () => {
+  return gulp.src('src/*.html')
       .pipe(htmlmin({collapseWhitespace: true}))
       .pipe(gulp.dest('dist'));
+      
 })
