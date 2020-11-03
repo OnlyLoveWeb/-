@@ -1,5 +1,7 @@
+"use strict";
+
 console.log('before');
-setTimeout( function() {
+setTimeout(function () {
   console.log('last');
-})
+});
 console.log('after');

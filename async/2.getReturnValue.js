@@ -1,10 +1,11 @@
 function getMsg(callback) {
   setTimeout(function() {
     callback({
-      msg: 'hello node.js'
+      msg: "hello"
     })
-  }, 2000)
+  }, 3000)
 }
-getMsg(function(data) {
+const msg = getMsg(function(data) {
   console.log(data);
-})
+  return data;
+});
