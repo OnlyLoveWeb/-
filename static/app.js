@@ -11,6 +11,7 @@ app.on('request', (req, res) => {
   pathname = pathname == '/' ? '/default.html' : pathname;
   let realPath = path.join(__dirname + '/public' + pathname);
   // res.end(realPath);
+  console.log(__dirname);
   let type = mime.getType(realPath);
   console.log(type);
   fs.readFile(realPath, (error, result) => {
